@@ -8,12 +8,20 @@ function SelectList(props) {
     {
       id: 1,
       corporateName: "위솝",
+      owner: "난대표",
       employeeNum: 8,
       isWorking: 5,
     },
+    {
+      id: 2,
+      corporateName: "테스트",
+      owner: "테스트대표",
+      employeeNum: 3,
+      isWorking: 1,
+    },
   ]);
 
-  const [nextID, setNextID] = useState(2);
+  const [nextID, setNextID] = useState(3);
 
   //새로운 사업장 추가
   const handleAddList = () => {
@@ -26,6 +34,11 @@ function SelectList(props) {
 
     setNextID(nextID + 1);
     setBsnInfo(newBsnInfo);
+  };
+
+  const handleLinktoDetail = () => {
+    console.log("입장하기 클릭");
+    //id값에따라 detail 페이지 나타내기 - 여기서 owner 넘겨주기
   };
 
   return (
@@ -44,7 +57,11 @@ function SelectList(props) {
       <div className="listArea w-full h-screen overflow-y-auto px-12">
         <ul className="flex flex-wrap flex-row justify-center">
           {bsnInfo.map((data) => (
-            <SelectListEntry key={data.id} data={data} />
+            <SelectListEntry
+              key={data.id}
+              data={data}
+              handleLinktoDetail={handleLinktoDetail}
+            />
           ))}
           <button
             className="listEntryBtn bg-transparent m-4 rounded-2xl p-4 border-dashed border-2 border-gray-700 border-opacity-25"
