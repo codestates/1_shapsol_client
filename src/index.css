@@ -8,6 +8,15 @@
   outline: none;
 }
 
+button:focus{
+  outline: none;
+}
+
+header {
+  height: 90px;
+  /* position: fixed; */
+}
+
 body {
   overflow: hidden;
 }

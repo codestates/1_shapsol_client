@@ -2,7 +2,7 @@ import React from "react";
 import "./SelectList.css";
 
 function SelectListEntry(props) {
-  const { corporateName, employeeNum, isWorking } = props.data;
+  const { id, corporateName, employeeNum, isWorking } = props.data;
   const { handleLinktoDetail } = props;
 
   return (
@@ -28,7 +28,7 @@ function SelectListEntry(props) {
           className="border border-gray-200 w-full p-4"
           onClick={(e) => {
             e.preventDefault();
-            handleLinktoDetail();
+            handleLinktoDetail(id);
           }}
         >
           입장하기

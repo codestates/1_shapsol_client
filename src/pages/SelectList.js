@@ -4,42 +4,11 @@ import { SelectListEntry } from "../components";
 
 function SelectList(props) {
   //사업장ID, 사업장명, 직원수, 근무중 인원수
-  const [bsnInfo, setBsnInfo] = useState([
-    {
-      id: 1,
-      corporateName: "위솝",
-      owner: "난대표",
-      employeeNum: 8,
-      isWorking: 5,
-    },
-    {
-      id: 2,
-      corporateName: "테스트",
-      owner: "테스트대표",
-      employeeNum: 3,
-      isWorking: 1,
-    },
-  ]);
-
-  const [nextID, setNextID] = useState(3);
-
-  //새로운 사업장 추가
-  const handleAddList = () => {
-    const newBsnInfo = bsnInfo.concat({
-      id: nextID,
-      corporateName: `추가${nextID}`,
-      employeeNum: 1,
-      isWorking: 0,
-    });
-
-    setNextID(nextID + 1);
-    setBsnInfo(newBsnInfo);
-  };
-
-  const handleLinktoDetail = () => {
-    console.log("입장하기 클릭");
-    //id값에따라 detail 페이지 나타내기 - 여기서 owner 넘겨주기
-  };
+  console.log('###')
+  console.log(props)
+  console.log('###')
+  const bsnInfo = props.data;
+  const { handleAddList, handleLinktoDetail } = props;
 
   return (
     <div className="selectList-wrap flex flex-wrap flex-col items-center">
