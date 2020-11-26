@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from 'react-router-dom';
 import {
   DetailsNav,
@@ -12,11 +12,12 @@ import {
 } from "../components/";
 
 function Details(props) {
+  const { owner } = props.data[0];
   return (
     <div className="flex">
-      <DetailsNav name={props.name} />
-      <Switch>
-        <div className="details-content-area ml-4">
+      <DetailsNav owner={owner} />
+      <div className="details-content-area ml-4">
+        <Switch>
           <Route exact path="/details">
             <DetailsStore />
           </Route>
@@ -38,8 +39,8 @@ function Details(props) {
           <Route path="/details/price">
             <DetailsPrice />
           </Route>
-        </div>
-      </Switch>
+        </Switch>
+      </div>
     </div>
   );
 }

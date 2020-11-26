@@ -1,4 +1,5 @@
 export { default as Nav } from "./Nav";
+export { default as SelectListEntry } from "./SelectListEntry";
 
 // about details
 export { default as DetailsNav } from "./details/DetailsNav";
