@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 //pages
-import { Login } from "./pages";
+import { Login, SelectList } from "./pages";
 //components
 import { Nav } from "./components";
 
 function App() {
   const [isLogin, setIslogin] = useState(false);
+  let history = useHistory();
 
   const handleisLogin = () => {
     console.log("로그인버튼클릭");
     setIslogin(!isLogin);
+
+    history.push("/select");
   };
 
   return (
@@ -22,10 +25,14 @@ function App() {
           </header>
           <div className="contents">
             <Switch>
-              <Route path="/select" />
+              <Route path="/select">
+                <SelectList />
+              </Route>
               {/* //select에서 id를 props로 전달받아야한다. */}
               <Route path="/detail/:id" />
             </Switch>
+            {/* <div className="contents-header" />
+            <SelectList /> */}
           </div>
         </>
       ) : (
@@ -49,3 +56,9 @@ export default App;
 // 의문사항
 // select 페이지에서 detail로 넘어갔을 떄 전체 정보를 받아올지
 // detail로 넘어갈 때 기본정보만 받아고, 세부정보를 때에 따라 요청할지
+
+// <Switch>
+//   <Route path="/select" component={SelectList} />
+//   {/* //select에서 id를 props로 전달받아야한다. */}
+//   <Route path="/detail/:id" />
+// </Switch>;

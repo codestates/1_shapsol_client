@@ -1,0 +1,42 @@
+.selectList-wrap {
+  background-color: rgb(236, 229, 229);
+  overflow: hidden;
+}
+
+.selectList-wrap input {
+  width: 600px;
+}
+
+.searchBar {
+  position: relative;
+}
+
+.searchBar > img {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+}
+
+.listArea > ul li {
+  width: 350px;
+  height: 350px;
+}
+
+.listArea .listEntryBtn {
+  width: 350px;
+  height: 350px;
+}
+
+.listEntryArea {
+  position: relative;
+}
+
+.listEntryArea > img {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 25px;
+
+  filter: invert(35%) sepia(16%) saturate(9%) hue-rotate(70deg) brightness(97%)
+    contrast(93%);
+}
