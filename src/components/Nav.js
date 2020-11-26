@@ -8,7 +8,7 @@ function Nav(props) {
         <img className="w-20" src="./img/logo.png" alt="logo" />
       </a>
       <button
-        className="ml-auto text-white py-2 px-2 bg-red-500 font-normal text-xs  rounded"
+        className="ml-auto text-white py-2 px-10 bg-red-500 font-normal text-xs rounded"
         onClick={(e) => {
           e.preventDefault();
           props.handleisLogin();
