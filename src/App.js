@@ -1,23 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 //pages
-
+import { Login } from "./pages";
 //components
 import { Nav } from "./components";
 
 function App() {
+  const [isLogin, setIslogin] = useState(false);
+
+  const handleisLogin = () => {
+    console.log("로그인버튼클릭");
+    setIslogin(!isLogin);
+  };
+
   return (
     <div className="wrap">
-      <header className="w-full border-b border-gray-300">
-        <Nav />
-      </header>
-      <div className="contents">
-        <Switch>
-          <Route path="/select" />
-          {/* //select에서 id를 props로 전달받아야한다. */}
-          <Route path="/detail/:id" />
-        </Switch>
-      </div>
+      {isLogin ? (
+        <>
+          <header className="w-full border-b border-gray-300">
+            <Nav handleisLogin={handleisLogin} />
+          </header>
+          <div className="contents">
+            <Switch>
+              <Route path="/select" />
+              {/* //select에서 id를 props로 전달받아야한다. */}
+              <Route path="/detail/:id" />
+            </Switch>
+          </div>
+        </>
+      ) : (
+        <>
+          <Login handleisLogin={handleisLogin} />
+        </>
+      )}
     </div>
   );
 }
