@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 //pages
-import { Login } from "./pages";
+import { Login, Details } from "./pages";
 //components
 import { Nav } from "./components";
 
 function App() {
-  const [isLogin, setIslogin] = useState(false);
+  const [isLogin, setIslogin] = useState(true);
+  const [name, setName] = useState('강우준');
 
   const handleisLogin = () => {
     console.log("로그인버튼클릭");
@@ -17,22 +18,26 @@ function App() {
     <div className="wrap">
       {isLogin ? (
         <>
-          <header className="w-full border-b border-gray-300">
-            <Nav handleisLogin={handleisLogin} />
-          </header>
-          <div className="contents">
+          <div className="header-container">
+            <header className="w-full border-b border-gray-300">
+              <Nav handleisLogin={handleisLogin} />
+            </header>
+          </div>
+          <div className="contents-container ">
             <Switch>
               <Route path="/select" />
               {/* //select에서 id를 props로 전달받아야한다. */}
-              <Route path="/detail/:id" />
+              <Route path="/details" >
+                <Details name={name} />
+              </Route>
             </Switch>
           </div>
         </>
       ) : (
-        <>
-          <Login handleisLogin={handleisLogin} />
-        </>
-      )}
+          <>
+            <Login handleisLogin={handleisLogin} />
+          </>
+        )}
     </div>
   );
 }
