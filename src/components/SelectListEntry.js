@@ -3,6 +3,7 @@ import "./SelectList.css";
 
 function SelectListEntry(props) {
   const { corporateName, employeeNum, isWorking } = props.data;
+  const { handleLinktoDetail } = props;
 
   return (
     <>
@@ -23,7 +24,15 @@ function SelectListEntry(props) {
             </p>
           </div>
         </div>
-        <button className="border border-gray-200 w-full p-4">입장하기</button>
+        <button
+          className="border border-gray-200 w-full p-4"
+          onClick={(e) => {
+            e.preventDefault();
+            handleLinktoDetail();
+          }}
+        >
+          입장하기
+        </button>
       </li>
     </>
   );
