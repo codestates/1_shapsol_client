@@ -7,7 +7,13 @@ function Nav(props) {
       <a href="http://www.shop-sol.com/">
         <img className="w-20" src="./img/logo.png" alt="logo" />
       </a>
-      <button className="ml-auto text-white py-2 px-2 bg-red-500 font-normal text-xs  rounded">
+      <button
+        className="ml-auto text-white py-2 px-2 bg-red-500 font-normal text-xs  rounded"
+        onClick={(e) => {
+          e.preventDefault();
+          props.handleisLogin();
+        }}
+      >
         로그아웃
       </button>
     </div>
