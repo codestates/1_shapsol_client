@@ -12,6 +12,7 @@
 ![](https://img.shields.io/badge/frontend-reacthooks-4B275F?style=for-the-badge&logo=react)<BR />
 ![](https://img.shields.io/badge/frontend-HTML-E34F26?style=for-the-badge&logo=html5)<BR />
 ![](https://img.shields.io/badge/frontend-CSS-1572B6?style=for-the-badge&logo=css3)<BR />
+![](https://img.shields.io/badge/frontend-tailwindCSS-38B2AC?style=for-the-badge&logo=TailwindCSS)<BR />
 
 ## Back
 ![](https://img.shields.io/badge/backend-nodejs-339933?style=for-the-badge&logo=node.js)<BR />
