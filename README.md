@@ -2,6 +2,7 @@
 
 # Shapsol
 #### Team1 : weshop - Shapsol
+![](https://user-images.githubusercontent.com/66121666/102477386-a3fa4e00-409f-11eb-9e06-e61b5d773610.png)
 
 
 # 📂 Stack
@@ -15,7 +16,6 @@
 ## Back
 ![](https://img.shields.io/badge/backend-nodejs-339933?style=for-the-badge&logo=node.js)<BR />
 ![](https://img.shields.io/badge/backend-express-black?style=for-the-badge)<BR />
-![](https://img.shields.io/badge/backend-sequelize-black?style=for-the-badge)<BR />
 ![](https://img.shields.io/badge/backend-MySql-4479A1?style=for-the-badge&logo=mysql)<BR />
 ![](https://img.shields.io/badge/backend-JWT-black?style=for-the-badge&logo=jsonwebtokens)<BR />
 ![](https://img.shields.io/badge/backend-AWS-232f3e?style=for-the-badge&logo=amazonaws)<BR />
