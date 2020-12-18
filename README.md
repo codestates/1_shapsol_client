@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/PROJECT-shapsol-E34F26?style=for-the-badge)<BR />
 
-# Shapsol
-#### Team1 : weshop - Shapsol
+# Shopsol
+#### Team1 : weshop - Shopsol
 ![](https://user-images.githubusercontent.com/66121666/102477386-a3fa4e00-409f-11eb-9e06-e61b5d773610.png)
 
 
