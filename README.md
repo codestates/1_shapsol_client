@@ -26,7 +26,7 @@
 
 ![we_shop_flow_chart](https://user-images.githubusercontent.com/66121666/102714037-977c2c80-430f-11eb-928a-51d4616ad302.png)
 
-## 📌 Team : AppleJujube
+## 📌 Team : WeShop
 | Team|Role|
 | :----: | :----: |
 | 이계진 | 🏁 Back-End |
